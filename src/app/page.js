@@ -15,7 +15,7 @@ export default function Home() {
 
       <div className={styles.grid}>
         <form className={styles.description}>
-        <label for="document">Wybież dokumetn do analizy:</label>
+        <label htmlFor="document">Wybież dokumetn do analizy:</label>
           <select name="document" id="document">
             <option value="OS_ZS009_1010.pdf">OS_ZS009_1010.pdf</option>
             <option value="OS_ZS009_1011.pdf">OS_ZS009_1011.pdf</option>
@@ -25,7 +25,7 @@ export default function Home() {
         </form>
       </div>
       <div className={styles.grid}>
-        <div class={styles.card}>
+        <div className={styles.card}>
           <h3>Dane poszkodowanego</h3>
           <h4>Imię i nazwisko</h4>
           <p>Jan Kowalski</p>
@@ -39,11 +39,11 @@ export default function Home() {
           <h4>Numer polisy</h4>
           <p>454544800000656</p>
         </div>
-        <div class={styles.card}>
+        <div className={styles.card}>
           <h3>Opis okoliczności zdarzenia</h3>
           <p>Podczas próby otwarcia słoika z ogórkami, nagle pokrywa odskoczyła i ogórki wystrzeliły na wszystkie strony. Poszkodowany, zaskoczony i przestraszony, próbował uciec, ale poślizgnął się na jednym z ogórków i wylądował na podłodze, z ogórkami przyklejonymi do twarzy. Mimo że to było zabawne dla obserwujących, poszkodowany musiał zgłosić szkodę, gdyż złamał sobie palec u nogi podczas upadku. </p>
         </div>
-        <div class={styles.card}>
+        <div className={styles.card}>
             <p>Poszkodowany był pod wpływem alkoholu: </p>
             <span>NIE</span>
             <p>Poszkodowany był pod wpływem narkotyków: </p>
@@ -53,7 +53,7 @@ export default function Home() {
             <p>Czy poszkodowany liubi placki?: </p>
             <span>NIE - bezbożnik jeden</span>
         </div>
-        <div class={styles.card}>
+        <div className={styles.card}>
           <h3>Podsumowanie zdarzenia</h3>
           <p>Podczas próby otwarcia słoika z ogórkami, nagle pokrywa odskoczyła i ogórki wystrzeliły na wszystkie strony. Poszkodowany, zaskoczony i przestraszony, próbował uciec, ale poślizgnął się na jednym z ogórków i wylądował na podłodze, z ogórkami przyklejonymi do twarzy. Mimo że to było zabawne dla obserwujących, poszkodowany musiał zgłosić szkodę, gdyż złamał sobie palec u nogi podczas upadku. </p>
         </div>
