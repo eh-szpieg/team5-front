@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <h1>
-          OpenAi Squad 5 - NNW Project
+          Squad 5 - NNW Project
         </h1>
         <h2>
           Hackaton OpenAi 2023
@@ -14,15 +14,29 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <form className={styles.description}>
-        <label htmlFor="document">Wybież dokumetn do analizy:</label>
-          <select name="document" id="document">
+        <div className={styles.card}>
+        <form>
+          <label className={styles.description}>Wybierz dokument do analizy</label>
+          <select className={styles.description} id="document">
             <option value="OS_ZS009_1010.pdf">OS_ZS009_1010.pdf</option>
             <option value="OS_ZS009_1011.pdf">OS_ZS009_1011.pdf</option>
             <option value="OS_ZS009_1012.pdf">OS_ZS009_1012.pdf</option>
             <option value="OS_ZS009_1013.pdf">OS_ZS009_1013.pdf</option>
           </select>
         </form>
+        <button className={styles.description} type="button">Analiza</button>
+        </div>
+        <div className={styles.card}>
+        <form>
+          <label className={styles.description}>Zadaj pytanie do dokumentu</label>
+          <textarea className={styles.description}></textarea>
+        </form>
+        <button className={styles.description} type="button">Zapytaj</button>
+        </div>
+        <div className={styles.card}>
+            <h2>Odpowiedź</h2>
+            <p>Odpowiedz do dokuemntu</p>
+        </div>
       </div>
       <div className={styles.grid}>
         <div className={styles.card}>
