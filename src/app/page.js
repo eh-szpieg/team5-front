@@ -31,7 +31,7 @@ export default function Home() {
         <AnalyzeForm updateOdpowiedz={updateOdpowiedz}/>
         </div>
         <div className={styles.card}>
-        <ChatForm />
+        <ChatForm updateOdpowiedz={updateOdpowiedz}/>
         </div>
         <div className={styles.card}>
             <h2>Odpowiedź</h2>

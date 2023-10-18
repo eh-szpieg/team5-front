@@ -13,7 +13,7 @@ export function AnalyzeForm(props) {
     }
 
     return (
-        <Form onClick={handleSubmit}>
+        <Form onSubmit={handleSubmit}>
             <label className={styles.description}>Wybierz dokument do analizy</label>
             <select className={styles.description} onChange={(event) => setDocument(event.target.value)} value={document}>
                 <option value="OS_ZS009_1010.pdf">OS_ZS009_1010.pdf</option>
@@ -26,17 +26,18 @@ export function AnalyzeForm(props) {
     );
 }
 
-export function ChatForm() {
+export function ChatForm(props) {
+    const [prompt, setPrompt] = useState('');
 
     const handleSubmit = (event) => {
-        alert("dupa")
+        props.updateOdpowiedz(prompt);
     }
 
     return (
         <Form onSubmit={handleSubmit}>
             <label className={styles.description}>Zadaj pytanie do dokumentu</label>
-            <textarea className={styles.description}></textarea>
-            <input type='submit' className={styles.description}></input>
+            <textarea className={styles.description} onChange={(event) => setPrompt(event.target.value)} value={prompt}></textarea>
+            <button type="submit" className={styles.description}>Wyślij</button>
         </Form>
     );
 }
