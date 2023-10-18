@@ -1,7 +1,21 @@
+'use client';
 import Image from 'next/image'
 import styles from './page.module.css'
+import React, { useState } from 'react';
+import { AnalyzeForm, ChatForm } from './forms'
+import Odpowiedz from './Odpowiedz';
+import Form from './Form';
+import { useRef } from 'react';
+
 
 export default function Home() {
+  const [odpowiedz, setOdpowiedz] = useState('');
+
+  const updateOdpowiedz = (value) => {
+    console.log('Aktualizacja odpowiedzi:', value);
+    setOdpowiedz(value);
+  }
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -12,30 +26,16 @@ export default function Home() {
           Hackaton OpenAi 2023
         </h2>
       </div>
-
       <div className={styles.grid}>
         <div className={styles.card}>
-        <form>
-          <label className={styles.description}>Wybierz dokument do analizy</label>
-          <select className={styles.description} id="document">
-            <option value="OS_ZS009_1010.pdf">OS_ZS009_1010.pdf</option>
-            <option value="OS_ZS009_1011.pdf">OS_ZS009_1011.pdf</option>
-            <option value="OS_ZS009_1012.pdf">OS_ZS009_1012.pdf</option>
-            <option value="OS_ZS009_1013.pdf">OS_ZS009_1013.pdf</option>
-          </select>
-        </form>
-        <button className={styles.description} type="button">Analiza</button>
+        <AnalyzeForm updateOdpowiedz={updateOdpowiedz}/>
         </div>
         <div className={styles.card}>
-        <form>
-          <label className={styles.description}>Zadaj pytanie do dokumentu</label>
-          <textarea className={styles.description}></textarea>
-        </form>
-        <button className={styles.description} type="button">Zapytaj</button>
+        <ChatForm />
         </div>
         <div className={styles.card}>
             <h2>Odpowiedź</h2>
-            <p>Odpowiedz do dokuemntu</p>
+          <Odpowiedz value={odpowiedz} />
         </div>
       </div>
       <div className={styles.grid}>
